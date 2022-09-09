@@ -3,6 +3,7 @@ import Head from 'next/head'
 // import 'normalize.css'
 
 import Layout from '@src/components/ui/Layout'
+import PageList from '@src/components/PageList'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
 
       <Layout>
         <h1>title</h1>
+        <PageList />
       </Layout>
     </div>
   )

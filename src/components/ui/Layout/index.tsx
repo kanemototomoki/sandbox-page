@@ -3,7 +3,7 @@ import Footer from '../Footer'
 import Header from '../Header'
 import styles from './style.module.css'
 
-const Layout = ({ children }: { children: ReactElement }) => {
+const Layout = ({ children }: { children: ReactElement[] }) => {
   return (
     <div className={styles.wrapper}>
       <Header />
