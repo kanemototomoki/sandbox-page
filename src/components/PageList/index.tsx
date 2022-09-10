@@ -13,7 +13,7 @@ const PageList = () => {
     <ul>
       {pageList.map(({ text, path }) => {
         return (
-          <li>
+          <li key={text}>
             <NextLink href={path}>
               <a>{text}</a>
             </NextLink>

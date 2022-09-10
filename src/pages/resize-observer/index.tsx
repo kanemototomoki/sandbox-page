@@ -1,4 +1,4 @@
-
+import Layout from '@src/components/ui/layout/Main'
 
 const ResizeObserver = () => {
   return (
@@ -7,5 +7,7 @@ const ResizeObserver = () => {
     </>
   )
 }
+
+ResizeObserver.getLayout = Layout
 
 export default ResizeObserver

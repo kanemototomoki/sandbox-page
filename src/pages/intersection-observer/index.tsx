@@ -1,3 +1,5 @@
+import Layout from '@src/components/ui/layout/Main'
+
 const IntersectionObserver = () => {
   return (
     <>
@@ -5,5 +7,7 @@ const IntersectionObserver = () => {
     </>
   )
 }
+
+IntersectionObserver.getLayout = Layout
 
 export default IntersectionObserver
