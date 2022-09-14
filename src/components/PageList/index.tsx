@@ -6,6 +6,7 @@ export const pageList = [
     path: 'intersection-observer',
   },
   { text: 'resizeObserver', path: 'resize-observer' },
+  { text: 'grid', path: 'grid' },
 ]
 
 const PageList = () => {

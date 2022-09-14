@@ -12,5 +12,6 @@
 
 ## 使用技術
 - next.js
+- mdx
 - jest
 - @testing-library
