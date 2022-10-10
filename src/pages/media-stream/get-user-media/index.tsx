@@ -1,6 +1,6 @@
-import GetUserMedia from '@src/components/template/GetUserMedia'
+import GetUserMedia from '@src/components/template/MediaStream/GetUserMedia'
 import Layout from '@ui/layout/Main'
-import { NextPageWithLayout } from '../_app'
+import { NextPageWithLayout } from '../../_app'
 
 type Props = {}
 

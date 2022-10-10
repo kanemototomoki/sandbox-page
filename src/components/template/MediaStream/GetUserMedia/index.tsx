@@ -7,4 +7,5 @@ const getUserMedia = () => {
     </>
   )
 }
+
 export default getUserMedia
