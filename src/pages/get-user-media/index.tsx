@@ -1,13 +1,13 @@
-import Layout from '@src/components/ui/layout/Main'
+import GetUserMedia from '@src/components/template/GetUserMedia'
+import Layout from '@ui/layout/Main'
+import { NextPageWithLayout } from '../_app'
 
-const GetUserMedia = () => {
-  return (
-    <>
-      <p>getUserMedia</p>
-    </>
-  )
+type Props = {}
+
+const Page: NextPageWithLayout<Props> = () => {
+  return <GetUserMedia />
 }
 
-GetUserMedia.getLayout = Layout
+Page.getLayout = Layout
 
-export default GetUserMedia
+export default Page
