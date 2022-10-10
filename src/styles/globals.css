@@ -2,8 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,6 +13,19 @@ a {
 
 ul {
   list-style: none;
+}
+
+/* toggle display code block copy-button */
+/* [class^='ch-code'] [class$="button"] {
+  display: none;
+}
+
+[class^='ch-code']:hover [class$="button"] {
+  display: block;
+} */
+
+[class^='ch-code'] {
+  font-family: SFMono-Regular, Consolas;
 }
 
 @media (prefers-color-scheme: dark) {
