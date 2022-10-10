@@ -1,6 +1,11 @@
 import Content from './index.mdx'
 
 const Grid = () => {
-  return <Content />
+  return (
+    <>
+      <h1>aaaa</h1>
+      <Content />
+    </>
+  )
 }
 export default Grid
