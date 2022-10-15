@@ -25,29 +25,27 @@ export const pageList: Path[] = [
 ]
 
 const PageList = () => {
+  const createLinks = ({ text, path, nest }: Path) => {
+    return (
+      <li key={text}>
+        <NextLink href={path}>
+          <a>{text}</a>
+        </NextLink>
+        {nest ? (
+          <ul>
+            {nest.map((arg) => {
+              return createLinks(arg)
+            })}
+          </ul>
+        ) : null}
+      </li>
+    )
+  }
+
   return (
     <ul>
-      {pageList.map(({ text, path, nest }) => {
-        return (
-          <li key={text}>
-            <NextLink href={path}>
-              <a>{text}</a>
-            </NextLink>
-            {nest ? (
-              <ul>
-                {nest.map(({ text, path, nest }) => {
-                  return (
-                    <li key={text}>
-                      <NextLink href={path}>
-                        <a>{text}</a>
-                      </NextLink>
-                    </li>
-                  )
-                })}
-              </ul>
-            ) : null}
-          </li>
-        )
+      {pageList.map((paths: Path) => {
+        return createLinks(paths)
       })}
     </ul>
   )
