@@ -14,7 +14,7 @@ const Layout: GetLayout = (page) => {
       </Head>
       <div className={styles.wrapper}>
         <Header />
-        <main>{page}</main>
+        <main className={styles.main}>{page}</main>
         <Footer />
       </div>
     </>
