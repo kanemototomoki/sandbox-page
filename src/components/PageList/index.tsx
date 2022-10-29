@@ -28,9 +28,7 @@ const PageList = () => {
   const createLinks = ({ text, path, nest }: Path) => {
     return (
       <li key={text}>
-        <NextLink href={path}>
-          <a>{text}</a>
-        </NextLink>
+        <NextLink href={path}>{text}</NextLink>
         {nest ? (
           <ul>
             {nest.map((arg) => {
