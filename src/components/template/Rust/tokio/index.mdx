@@ -1,0 +1,42 @@
+import { MdxHeader } from '@ui/MdxHeader'
+
+export const meta = {
+  createdAt: '2022-12-06',
+  updatedAt: '2022-12-06',
+}
+
+# tokio
+
+<MdxHeader meta={meta} />
+
+## 概要
+tokioでGETリクエストを行う
+
+## コード
+
+```sh
+cargo add reqwest
+cargo add tokio
+```
+
+```rs
+use reqwest;
+
+#[tokio::main]
+async fn main() -> Result<(), reqwest::Error> {
+    let response: String = get_input().await?;
+
+    println!("response: {}", response);
+    Ok(())
+}
+
+async fn get_input() -> Result<String, reqwest::Error> {
+    let response = reqwest
+        ::get("http://xxxx")
+        .await?
+        .text()
+        .await?;
+
+    Ok(response)
+}
+```
