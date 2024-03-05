@@ -7,7 +7,9 @@
     "build": "remix vite:build",
     "deploy": "pnpm run build && wrangler pages deploy ./build/client",
     "dev": "remix vite:dev",
-    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "lint": "biome check --apply-unsafe .",
+    "format": "prettier -w './**/*.{md,yml}' && biome format --write .",
+    "check": "pnpm run typecheck && pnpm run format && pnpm run lint",
     "start": "wrangler pages dev ./build/client",
     "typecheck": "tsc",
     "typegen": "wrangler types",
@@ -24,8 +26,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.5.3",
     "@cloudflare/workers-types": "^4.20240222.0",
     "@remix-run/dev": "^2.7.2",
+    "@stylexjs/stylex": "^0.5.1",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
@@ -39,6 +43,7 @@
     "node-fetch": "^3.3.2",
     "typescript": "^5.1.6",
     "vite": "^5.1.0",
+    "vite-plugin-stylex": "^0.5.1",
     "vite-tsconfig-paths": "^4.2.1",
     "wrangler": "^3.24.0"
   },
