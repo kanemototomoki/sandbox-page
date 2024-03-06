@@ -1,6 +1,13 @@
+import { LinksFunction } from '@remix-run/cloudflare'
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
+import stylex from '@stylexjs/stylex'
 import type { ReactNode } from 'react'
+import { globalStyles } from './global.css'
 import './index.css'
+
+export const links: LinksFunction = () => {
+  return []
+}
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
@@ -11,7 +18,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body {...stylex.props(globalStyles.body)}>
         {children}
         <ScrollRestoration />
         <Scripts />
